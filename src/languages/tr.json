@@ -1,0 +1,12 @@
+{
+    "hello":"Merhaba",
+    "home":"Ana sayfa",
+    "about":"Hakkında",
+    "doctors":"Doktorlar",
+    "services":
+    {
+        "services":"Hizmetler",
+        "s":""
+    },
+    "contact":"İLETİŞİM"
+}
