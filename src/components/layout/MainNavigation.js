@@ -9,7 +9,10 @@ import {
     Bars3Icon,
 } from "@heroicons/react/24/outline";
 import ServicesDropdown from "./ServicesDropDown";
-
+import Dropdown, { DropdownItem } from "../common/Dropdown";
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRef } from 'react';
 
 const MainNavigation = () => {
 
@@ -18,13 +21,19 @@ const MainNavigation = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
+    let lngRef = useRef("");
 
+    function handleDropdown() {
+        console.log(lngRef.current)
+    }
 
-    const handleChangeLanguage = () => {
+    const handleChangeLanguage = (e) => {
+
         const newLanguage = currentLanguage === "en" ? "tr" : "en";
         setCurrentLanguage(newLanguage);
-        changeLanguage(newLanguage)
+        changeLanguage(e) //works so make it dynamic
         const data = t("about")
+        console.log(e)
         console.log(data)
         console.log(language)
     }
@@ -67,7 +76,7 @@ const MainNavigation = () => {
                         {/* primary */}
                         <div className="hidden lg:flex xl:gap-12 gap-6 ease-in-out ">
                             <Link className="hover:underline hover:scale-110 duration-300  " to="/Home">{t("home")}</Link>
-                            <ServicesDropdown className="" />
+                            <ServicesDropdown />
                             <Link className="hover:underline hover:scale-110 duration-300" to="/Doctors">{t("doctors")}</Link>
                             <Link className="hover:underline hover:scale-110 duration-300" to="/About">{t("about")}</Link>
                         </div>
@@ -82,9 +91,23 @@ const MainNavigation = () => {
                                         : <MoonIcon onClick={() => ToggleDarkTheme(true)} className="h-6 w-6" />
                                 }
                             </div>
-                            <div>
+                            <div className="flex">
                                 <Button style="bg-green-400 dark:bg-green-400 dark:text-white dark:border-0 ">{t("contact")}</Button>
-                                <Button style="bg-green-400 dark:bg-green-400 dark:text-white dark:border-0" onClick={handleChangeLanguage}>{language === "en" ? "TR" : "EN"}</Button>
+                                <Dropdown trigger={<Button><FontAwesomeIcon size="lg" icon={faGlobe} /></Button>}>
+                                    <DropdownItem key={"EN"} onClick={() => handleChangeLanguage("en")}>
+                                        EN
+                                    </DropdownItem >
+                                    <DropdownItem key={"TR"} onClick={() => handleChangeLanguage("tr")} >
+                                        TR
+                                    </DropdownItem>
+                                    <DropdownItem key={"DE"} onClick={() => handleChangeLanguage("DE")}>
+                                        DE
+                                    </DropdownItem>
+                                    <DropdownItem key={"ES"} onClick={() => handleChangeLanguage("ES")}>
+                                        ES
+                                    </DropdownItem>
+                                </Dropdown>
+                                {/* <Button style="bg-green-400 dark:bg-green-400 dark:text-white dark:border-0" onClick={handleChangeLanguage}>{language === "en" ? "TR" : "EN"}</Button> */}
                             </div>
                         </div>
                     </div>
@@ -116,6 +139,7 @@ const MainNavigation = () => {
                             }
                         </div>
                         <div className="flex gap-8">
+
                             <Button style="bg-green-600 dark:bg-green-600 dark:text-white dark:border-0 ">{t("contact")}</Button>
                             <Button style="bg-green-600 dark:bg-green-600 dark:text-white dark:border-0" onClick={handleChangeLanguage}>{language === "en" ? "TR" : "EN"}</Button>
                         </div>

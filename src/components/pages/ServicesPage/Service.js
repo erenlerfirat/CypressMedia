@@ -1,7 +1,7 @@
 import React from 'react'
 import ServiceSection from './ServiceSection'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCreditCard, faEnvelope, faPhotoFilm, faCommentSms, faMailForward, faCalendar, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faCreditCard, faEnvelope, faPhotoFilm, faCommentSms, faMailForward, faCalendar, faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 
