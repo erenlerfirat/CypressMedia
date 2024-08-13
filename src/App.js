@@ -1,13 +1,25 @@
-import { Fragment } from 'react';
+import { useState } from 'react';
 import Home from './components/pages/HomePage/Home.js';
 import './App.css';
-
+import LanguageContext from './context/LanguageContext.js';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t, i18n: { changeLanguage, language } } = useTranslation();
+  const [lang, setLanguage] = useState("en");
+
+  const handleLanguage = (data) => {
+    setLanguage(data); //render the Home component , means full site reload
+    changeLanguage(data);
+    // TODO SAVE LANG PREFERENCE TO COOKIE
+  }
+  const value = { lang, handleLanguage, t };
+
+
   return (
-    <Fragment>
+    <LanguageContext.Provider value={value}>
       <Home />
-    </Fragment >
+    </LanguageContext.Provider >
   );
 }
 

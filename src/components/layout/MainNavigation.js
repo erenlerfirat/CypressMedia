@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
 import Button from "../common/Button";
-import { useTranslation } from 'react-i18next';
 import logo from '../../assets/carlogo-100x100.jpg'
 import {
     MoonIcon,
@@ -12,30 +11,20 @@ import ServicesDropdown from "./ServicesDropDown";
 import Dropdown, { DropdownItem } from "../common/Dropdown";
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useRef } from 'react';
+import LanguageContext from "../../context/LanguageContext";
+
 
 const MainNavigation = () => {
 
-    const { t, i18n: { changeLanguage, language } } = useTranslation();
-    const [currentLanguage, setCurrentLanguage] = useState(language)
+    const [currentLanguage, setCurrentLanguage] = useState("en")
     const [toggleMenu, setToggleMenu] = useState(false);
     const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
-    let lngRef = useRef("");
-
-    function handleDropdown() {
-        console.log(lngRef.current)
-    }
-
+    const { lang, handleLanguage, t } = useContext(LanguageContext);
+    
     const handleChangeLanguage = (e) => {
-
-        const newLanguage = currentLanguage === "en" ? "tr" : "en";
-        setCurrentLanguage(newLanguage);
-        changeLanguage(e) //works so make it dynamic
-        const data = t("about")
-        console.log(e)
-        console.log(data)
-        console.log(language)
+        setCurrentLanguage(e);
+        handleLanguage(e);
     }
 
     const ToggleDarkTheme = (isDark) => {
@@ -100,10 +89,10 @@ const MainNavigation = () => {
                                     <DropdownItem key={"TR"} onClick={() => handleChangeLanguage("tr")} >
                                         TR
                                     </DropdownItem>
-                                    <DropdownItem key={"DE"} onClick={() => handleChangeLanguage("DE")}>
+                                    <DropdownItem key={"DE"} onClick={() => handleChangeLanguage("de")}>
                                         DE
                                     </DropdownItem>
-                                    <DropdownItem key={"ES"} onClick={() => handleChangeLanguage("ES")}>
+                                    <DropdownItem key={"ES"} onClick={() => handleChangeLanguage("es")}>
                                         ES
                                     </DropdownItem>
                                 </Dropdown>
@@ -141,7 +130,7 @@ const MainNavigation = () => {
                         <div className="flex gap-8">
 
                             <Button style="bg-green-600 dark:bg-green-600 dark:text-white dark:border-0 ">{t("contact")}</Button>
-                            <Button style="bg-green-600 dark:bg-green-600 dark:text-white dark:border-0" onClick={handleChangeLanguage}>{language === "en" ? "TR" : "EN"}</Button>
+                            <Button style="bg-green-600 dark:bg-green-600 dark:text-white dark:border-0" onClick={handleChangeLanguage}>{lang === "en" ? "TR" : "EN"}</Button>
                         </div>
                     </div>
                 </div>
