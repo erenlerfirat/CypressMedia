@@ -12,7 +12,7 @@ import Dropdown, { DropdownItem } from "../common/Dropdown";
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LanguageContext from "../../context/LanguageContext";
-
+import classes from './MainNavigation.module.css'
 
 const MainNavigation = () => {
 
@@ -21,7 +21,7 @@ const MainNavigation = () => {
     const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
     const { lang, handleLanguage, t } = useContext(LanguageContext);
-    
+
     const handleChangeLanguage = (e) => {
         setCurrentLanguage(e);
         handleLanguage(e);
@@ -46,8 +46,8 @@ const MainNavigation = () => {
         }
     }, [])
     return (
-        <nav className={toggleDarkMode ? "dark:bg-gray-600 dark:text-white w-full left-0 right-0 top-0 " : "bg-gray-100 left-0 right-0 top-0"}>
-            <div className="max-w-7xl mx-auto w-full relative " >
+        <nav className={toggleDarkMode ? " dark:bg-gray-600 dark:text-white w-full left-0 right-0 top-0 " : "bg-gray-100 left-0 right-0 top-0"}>
+            <div className="max-w-7xl mx-auto w-full relative background" >
                 <div className="flex mx-auto justify-between w-5/6 text-gray-800">
                     {/* Primary menu and logo */}
                     <div className="flex items-center gap-16 my-12 dark:text-white ">
@@ -57,7 +57,6 @@ const MainNavigation = () => {
                                 href="/"
                                 className="flex font-bold items-center gap-1 "
                             >
-                                {/* <PaperAirplaneIcon className="h-6 w-6  " /> */}
                                 <img src={logo} alt="" />
                                 <span className=""> Cypress Media </span>
                             </a>

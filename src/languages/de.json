@@ -1,12 +1,31 @@
 {
-    "hello":"Hallo",
-    "home":"DE",
-    "about":"DE",
-    "doctors":"DE",
+    "hello":"hallo",
+    "home":"Startseite",
+    "about":"Über uns",
+    "doctors":"Ärzte",
     "services":
     {
-        "services":"DE",
-        "s":""
+        "services":"Dienstleistungen",
+        "item":{"header":"Haartransplantations-Beratung","desc":"Vereinbaren Sie Ihre persönliche Beratung, um den besten Haarwiederherstellungsplan zu ermitteln."},
+        "item2":{"header":"FUE-Haartransplantation","desc":"Fortgeschrittene Follikeleinheit-Extraktionstechnik für natürlich aussehende Ergebnisse."},
+        "item3":{"header":"Nachsorge","desc":"Umfassende Nachsorge, um eine optimale Heilung und Wachstum zu gewährleisten."},
+        "item4":{"header":"Bart- und Schnurrbart-Transplantation","desc":"Erzielen Sie volleres Gesichtshaar mit unseren spezialisierten Transplantationsdiensten."},
+        "item5":{"header":"Haarausfall-Prävention","desc":" Verhindern Sie weiteren Haarausfall mit unseren gezielten Behandlungsplänen."},
+        "item6":{"header":"Ergebnisse der Haartransplantation","desc":" Sehen Sie echte Patientenresultate und verwandeln Sie Ihr Aussehen mit Vertrauen."}
     },
-    "contact":"DE"
+    "contact":"Kontakt",
+    "faq":{
+        "faq":"faq",
+        "item":{"header":"Was ist FlowBite?","desc2":"","desc3":""}
+        ,
+        "item2":{"header":"","desc2":"","desc3":""}
+        ,
+        "item3":{"header":"","desc2":"","desc3":""}
+        ,
+        "item4":{"header":"","desc2":"","desc3":""}
+        ,
+        "item5":{"header":"","desc2":"","desc3":""}
+        ,
+        "item6":{"header":"","desc2":"","desc3":""}
+    }
 }

@@ -1,12 +1,31 @@
 {
-    "hello":"ES",
-    "home":"ES",
-    "about":"ES",
-    "doctors":"ES",
+    "hello":"Hola",
+    "home":"Inicio",
+    "about":"Sobre nosotros",
+    "doctors":"Doctores",
     "services":
     {
-        "services":"ES",
-        "s":""
+        "services":"Servicios",
+        "item":{"header":"Consulta para Trasplante Capilar","desc":"Programe su consulta personalizada para determinar el mejor plan de restauración capilar."},
+        "item2":{"header":"Trasplante Capilar FUE","desc":"Técnica avanzada de extracción de unidades foliculares para resultados de apariencia natural."},
+        "item3":{"header":"Cuidado Postoperatorio","desc":"Cuidado postoperatorio integral para asegurar una curación y crecimiento óptimos."},
+        "item4":{"header":"Trasplante de Barba y Bigote","desc":"Logre un vello facial más denso con nuestros servicios de trasplante especializados."},
+        "item5":{"header":"Prevención de la Pérdida de Cabello","desc":"Prevenga la pérdida de cabello adicional con nuestros planes de tratamiento específicos."},
+        "item6":{"header":"Resultados del Trasplante Capilar","desc":"Vea resultados reales de pacientes y transforme su apariencia con confianza."}
     },
-    "contact":"ES"
+    "contact":"Contacto",
+    "faq":{
+        "faq":"faq",
+        "item":{"header":"Qué es FlowBite?","desc2":"","desc3":""}
+        ,
+        "item2":{"header":"","desc2":"","desc3":""}
+        ,
+        "item3":{"header":"","desc2":"","desc3":""}
+        ,
+        "item4":{"header":"","desc2":"","desc3":""}
+        ,
+        "item5":{"header":"","desc2":"","desc3":""}
+        ,
+        "item6":{"header":"","desc2":"","desc3":""}
+    }
 }

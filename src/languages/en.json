@@ -5,7 +5,26 @@
     "services":
     {
         "services":"Services",
-        "s":""
+        "item":{"header":"Hair Transplant Consultation","desc":"Schedule your personalized consultation to determine the best hair restoration plan."},
+        "item2":{"header":"FUE Hair Transplant","desc":"Advanced Follicular Unit Extraction technique for natural-looking results."},
+        "item3":{"header":"Post-Transplant Care","desc":"Comprehensive aftercare to ensure optimal healing and growth."},
+        "item4":{"header":"Beard and Mustache Transplant","desc":" Achieve fuller facial hair with our specialized transplant services."},
+        "item5":{"header":"Hair Loss Prevention","desc":"Prevent further hair loss with our targeted treatment plans."},
+        "item6":{"header":"Hair Transplant Results","desc":"See real patient results and transform your appearance with confidence."}
     },
-    "contact":"Contact"
+    "contact":"Contact",
+    "faq":{
+        "faq":"faq",
+        "item":{"header":"What is FlowBite?","desc2":"","desc3":""}
+        ,
+        "item2":{"header":"","desc2":"","desc3":""}
+        ,
+        "item3":{"header":"","desc2":"","desc3":""}
+        ,
+        "item4":{"header":"","desc2":"","desc3":""}
+        ,
+        "item5":{"header":"","desc2":"","desc3":""}
+        ,
+        "item6":{"header":"","desc2":"","desc3":""}
+    }
 }

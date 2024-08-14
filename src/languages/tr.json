@@ -5,8 +5,27 @@
     "doctors":"Doktorlar",
     "services":
     {
-        "services":"Hizmetler",
-        "s":""
+        "services":"Servisler",
+        "item":{"header":"Saç Ekimi Danışmanlığı","desc":"En iyi saç restorasyon planını belirlemek için kişiselleştirilmiş danışmanlığınızı planlayın."},
+        "item2":{"header":"FUE Saç Ekimi:","desc":"Doğal görünümlü sonuçlar için gelişmiş Foliküler Ünite Ekstraksiyonu tekniği."},
+        "item3":{"header":"Operasyon Bonrası Bakım","desc":"Optimal iyileşme ve büyüme sağlamak için kapsamlı bakım"},
+        "item4":{"header":"Sakal ve Bıyık Ekimi:","desc":" Özel nakil hizmetlerimizle daha dolgun yüz kıllarına kavuşun"},
+        "item5":{"header":"Saç Dökülmesini Önleme","desc":"Hedefe yönelik tedavi planlarımızla daha fazla saç dökülmesini önleyin."},
+        "item6":{"header":"Saç Ekimi Sonuçları","desc":"Gerçek hasta sonuçlarını görün ve görünümünüzü güvenle değiştirin."}
     },
-    "contact":"İLETİŞİM"
+    "contact":"İLETİŞİM",
+    "faq":{
+        "faq":"s.s.s",
+        "item":{"header":"Flowbite nedir?","desc2":"","desc3":""}
+        ,
+        "item2":{"header":"","desc2":"","desc3":""}
+        ,
+        "item3":{"header":"","desc2":"","desc3":""}
+        ,
+        "item4":{"header":"","desc2":"","desc3":""}
+        ,
+        "item5":{"header":"","desc2":"","desc3":""}
+        ,
+        "item6":{"header":"","desc2":"","desc3":""}
+    }
 }

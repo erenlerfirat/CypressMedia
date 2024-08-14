@@ -1,5 +1,7 @@
 import { MegaMenu, Navbar } from 'flowbite-react';
 import { HiArrowRight } from 'react-icons/hi';
+import LanguageContext from "../../context/LanguageContext";
+import { useContext } from "react";
 
 function ServicesDropdown() {
     const customTheme = {
@@ -7,12 +9,13 @@ function ServicesDropdown() {
             base: "bg-gray-100 text-gray-800 dark:bg-gray-600 dark:text-white ",
         },
     };
+    const { lang, handleLanguage, t } = useContext(LanguageContext);
 
     return (
         < MegaMenu theme={customTheme}>
             <Navbar.Toggle />
             <Navbar.Collapse >
-                <MegaMenu.Dropdown toggle={<div className='text-3xl'>Services</div>}>
+                <MegaMenu.Dropdown toggle={<div className='text-lg'>{t("services.services")}</div>}>
 
                     <div className="mx-auto mt-6 grid max-w-screen-xl border-y border-gray-200 px-4 py-5 text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
                         <ul className="space-y-4 sm:mb-4 md:mb-0 list-disc">
