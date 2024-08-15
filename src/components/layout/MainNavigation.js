@@ -12,7 +12,7 @@ import Dropdown, { DropdownItem } from "../common/Dropdown";
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LanguageContext from "../../context/LanguageContext";
-import classes from './MainNavigation.module.css'
+
 
 const MainNavigation = () => {
 
@@ -23,8 +23,12 @@ const MainNavigation = () => {
     const { lang, handleLanguage, t } = useContext(LanguageContext);
 
     const handleChangeLanguage = (e) => {
+
+        if (localStorage.getItem("i18nextLng") === e)
+            return;
         setCurrentLanguage(e);
         handleLanguage(e);
+        localStorage.setItem("lang", e);
     }
 
     const ToggleDarkTheme = (isDark) => {
@@ -38,7 +42,7 @@ const MainNavigation = () => {
         }
         setToggleDarkMode(isDark)
     }
-    // `${classes.background}`
+
     useEffect(() => {
         let isDark = localStorage.theme === 'dark';
         ToggleDarkTheme(isDark);

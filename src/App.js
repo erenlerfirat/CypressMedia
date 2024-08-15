@@ -9,10 +9,11 @@ function App() {
   const [lang, setLanguage] = useState("en");
 
   const handleLanguage = (data) => {
-    setLanguage(data); //render the Home component , means full site reload
+    console.log(localStorage.getItem("i18nextLng") + "+++")
+    if (localStorage.getItem("i18nextLng") === data)
+      return;
+    setLanguage(data);
     changeLanguage(data);
-    // TODO SAVE LANG PREFERENCE TO COOKIE
-    // DEFAULT IS ENGLISH IF NULL
   }
   const value = { lang, handleLanguage, t };
 

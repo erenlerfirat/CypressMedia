@@ -7,11 +7,11 @@ function Faq() {
     const { lang, handleLanguage, t } = useContext(LanguageContext);
     return (
         <>
-            <h1 className="text-3xl text-center mt-4 italic">{t("faq.faq")}</h1>
+            <h1 className="text-3xl text-center mt-4 italic dark:text-gray-200 uppercase">{t("faq.faq")}</h1>
             <div className="grid lg:grid-flow-col xl:grid-flow-col w-8/12 mx-auto my-12">
                 <Accordion className="w-full mx-auto dark:border-gray-400 dark:divide-white">
                     <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200">{t("faq.item.header")}</Accordion.Title>
+                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">{t("faq.item.header")}</Accordion.Title>
                         <Accordion.Content>
                             <p className="mb-2 text-gray-500 dark:text-gray-400">
                                 Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
@@ -30,7 +30,7 @@ function Faq() {
                         </Accordion.Content>
                     </Accordion.Panel>
                     <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200">Is there a Figma file available?</Accordion.Title>
+                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">Is there a Figma file available?</Accordion.Title>
                         <Accordion.Content>
                             <p className="mb-2 text-gray-500 dark:text-gray-400">
                                 Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
@@ -46,7 +46,7 @@ function Faq() {
                         </Accordion.Content>
                     </Accordion.Panel>
                     <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200">What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
+                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
                         <Accordion.Content>
                             <p className="mb-2 text-gray-500 dark:text-gray-400">
                                 The main difference is that the core components from Flowbite are open source under the MIT license, whereas
@@ -79,7 +79,7 @@ function Faq() {
                 </Accordion>
                 <Accordion className="w-full mx-auto dark:border-gray-400 dark:divide-white">
                     <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200">What is Flowbite?</Accordion.Title>
+                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">What is Flowbite?</Accordion.Title>
                         <Accordion.Content>
                             <p className="mb-2 text-gray-500 dark:text-gray-400">
                                 Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
@@ -98,7 +98,7 @@ function Faq() {
                         </Accordion.Content>
                     </Accordion.Panel>
                     <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200">Is there a Figma file available?</Accordion.Title>
+                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">Is there a Figma file available?</Accordion.Title>
                         <Accordion.Content>
                             <p className="mb-2 text-gray-500 dark:text-gray-400">
                                 Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
@@ -114,7 +114,7 @@ function Faq() {
                         </Accordion.Content>
                     </Accordion.Panel>
                     <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200">What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
+                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
                         <Accordion.Content>
                             <p className="mb-2 text-gray-500 dark:text-gray-400">
                                 The main difference is that the core components from Flowbite are open source under the MIT license, whereas
