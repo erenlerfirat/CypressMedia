@@ -13,7 +13,18 @@
         "item5":{"header":"Haarausfall-Prävention","desc":" Verhindern Sie weiteren Haarausfall mit unseren gezielten Behandlungsplänen."},
         "item6":{"header":"Ergebnisse der Haartransplantation","desc":" Sehen Sie echte Patientenresultate und verwandeln Sie Ihr Aussehen mit Vertrauen."}
     },
-    "contact":"Kontakt",
+"contact":{
+        "contact":"Kontact",
+        "email":"Email",
+        "header":"Kontaktieren Sie uns",
+        "desc":"Bitte teilen Sie uns Ihre Nachricht/Ihr Feedback mit und wir werden uns mit Ihnen in Verbindung setzen.",
+        "subject":"Betreff",
+        "message":"Nachricht",
+        "subjectPlaceholder":"Let us know how we can help you",
+        "messagePlaceholder":"Leave a comment...",
+        "emailPlaceholder":"name@email.com",
+        "button":"Nachricht senden"
+    },
     "faq":{
         "faq":"f.a.q.",
         "item":{"header":"Was ist FlowBite?","desc2":"","desc3":""}

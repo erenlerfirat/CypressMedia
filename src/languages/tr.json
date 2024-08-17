@@ -13,7 +13,18 @@
         "item5":{"header":"Saç Dökülmesini Önleme","desc":"Hedefe yönelik tedavi planlarımızla daha fazla saç dökülmesini önleyin."},
         "item6":{"header":"Saç Ekimi Sonuçları","desc":"Gerçek hasta sonuçlarını görün ve görünümünüzü güvenle değiştirin."}
     },
-    "contact":"İLETİŞİM",
+    "contact":{
+        "contact":"İLETİŞİM",
+        "email":"Email",
+        "header":"Bize Ulaşın",
+        "desc":"Lütfen mesajınızı/geri bildiriminizi bizimle paylaşın, size ulaşalım.",
+        "subject":"Konu",
+        "message":"Mesajınız",
+        "subjectPlaceholder":"Let us know how we can help you",
+        "messagePlaceholder":"Leave a comment...",
+        "emailPlaceholder":"name@email.com",
+        "button":"Mesaj gönder"
+    },
     "faq":{
         "faq":"s.s.s",
         "item":{"header":"Flowbite nedir?","desc2":"","desc3":""}

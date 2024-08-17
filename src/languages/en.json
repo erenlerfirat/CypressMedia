@@ -12,7 +12,19 @@
         "item5":{"header":"Hair Loss Prevention","desc":"Prevent further hair loss with our targeted treatment plans."},
         "item6":{"header":"Hair Transplant Results","desc":"See real patient results and transform your appearance with confidence."}
     },
-    "contact":"Contact",
+    "contact":{
+        "contact":"Contact",
+        "header":"Contact Us",
+        "desc":"Please share your message/feedback with us and we will reach out to you.",
+        "email":"Email",        
+        "subject":"Subject",        
+        "message":"Your message",
+        "subjectPlaceholder":"Let us know how we can help you",
+        "messagePlaceholder":"Leave a comment...",
+        "emailPlaceholder":"name@email.com",
+        "button":"Send message"
+        
+    },
     "faq":{
         "faq":"f.a.q.",
         "item":{"header":"What is FlowBite?","desc2":"","desc3":""}

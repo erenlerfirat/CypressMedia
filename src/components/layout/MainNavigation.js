@@ -84,8 +84,8 @@ const MainNavigation = () => {
                                 }
                             </div>
                             <div className="flex">
-                                <Button style="bg-green-400 dark:text-white dark:border-0 ">{t("contact")}</Button>
-                                <Dropdown trigger={<Button><FontAwesomeIcon size="lg" icon={faGlobe} /></Button>}>
+                                <Button style="bg-green-400 dark:text-white text-white dark:border-0 ">{t("contact.contact")}</Button>
+                                <Dropdown trigger={<Button style="text-white"><FontAwesomeIcon size="lg" icon={faGlobe} /></Button>}>
                                     <DropdownItem key={"EN"} onClick={() => handleChangeLanguage("en")}>
                                         EN
                                     </DropdownItem >
@@ -131,7 +131,7 @@ const MainNavigation = () => {
                         </div>
                         <div className="flex gap-8">
 
-                            <Button style="bg-green-400 dark:text-white dark:border-0 ">{t("contact")}</Button>
+                            <Button style="bg-green-400 text-white dark:text-white dark:border-0 ">{t("contact")}</Button>
                             <Dropdown trigger={<Button><FontAwesomeIcon size="lg" icon={faGlobe} /></Button>}>
                                 <DropdownItem key={"EN"} onClick={() => handleChangeLanguage("en")}>
                                     EN

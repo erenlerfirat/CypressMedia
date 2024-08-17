@@ -13,7 +13,18 @@
         "item5":{"header":"Prevención de la Pérdida de Cabello","desc":"Prevenga la pérdida de cabello adicional con nuestros planes de tratamiento específicos."},
         "item6":{"header":"Resultados del Trasplante Capilar","desc":"Vea resultados reales de pacientes y transforme su apariencia con confianza."}
     },
-    "contact":"Contacto",
+    "contact":{
+        "contact":"Contacto",
+        "email":"Email",
+        "header":"Contáctanos",
+        "desc":"Por favor, comparta su mensaje / comentario con nosotros para que podamos comunicarnos con usted.",
+        "subject":"Asunto",
+        "message":"Mensaje",
+        "subjectPlaceholder":"Let us know how we can help you",
+        "messagePlaceholder":"Leave a comment...",
+        "emailPlaceholder":"name@email.com",
+        "button":"Enviar mensaje"
+    },
     "faq":{
         "faq":"f.a.q.",
         "item":{"header":"Qué es FlowBite?","desc2":"","desc3":""}
