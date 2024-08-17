@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Home from './components/pages/HomePage/Home.js';
+import Home from './components/pages/Home/Home.js';
 import './App.css';
 import LanguageContext from './context/LanguageContext.js';
 import { useTranslation } from 'react-i18next';
-
+import { Routes, Route } from 'react-router-dom';
 function App() {
   const { t, i18n: { changeLanguage, language } } = useTranslation();
   const [lang, setLanguage] = useState("en");
@@ -20,7 +20,9 @@ function App() {
 
   return (
     <LanguageContext.Provider value={value}>
-      <Home />
+      <Routes>
+        <Route path="*" element={<Home />} />
+      </Routes>
     </LanguageContext.Provider >
   );
 }

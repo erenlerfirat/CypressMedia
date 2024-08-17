@@ -1,5 +1,5 @@
 import React from 'react'
-import Service from '../ServicesPage/Service'
+import Service from '../Services/Service.js'
 import Calendar from './Calendar.js'
 import MainNavigation from '../../layout/MainNavigation.js'
 import Footer from '../../layout/Footer.js'
