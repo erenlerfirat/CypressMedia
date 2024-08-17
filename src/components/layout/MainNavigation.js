@@ -84,7 +84,7 @@ const MainNavigation = () => {
                                 }
                             </div>
                             <div className="flex">
-                                <Button style="bg-green-400 dark:bg-green-400 dark:text-white dark:border-0 ">{t("contact")}</Button>
+                                <Button style="bg-green-400 dark:text-white dark:border-0 ">{t("contact")}</Button>
                                 <Dropdown trigger={<Button><FontAwesomeIcon size="lg" icon={faGlobe} /></Button>}>
                                     <DropdownItem key={"EN"} onClick={() => handleChangeLanguage("en")}>
                                         EN
@@ -99,7 +99,6 @@ const MainNavigation = () => {
                                         ES
                                     </DropdownItem>
                                 </Dropdown>
-                                {/* <Button style="bg-green-400 dark:bg-green-400 dark:text-white dark:border-0" onClick={handleChangeLanguage}>{language === "en" ? "TR" : "EN"}</Button> */}
                             </div>
                         </div>
                     </div>
@@ -132,8 +131,21 @@ const MainNavigation = () => {
                         </div>
                         <div className="flex gap-8">
 
-                            <Button style="bg-green-600 dark:bg-green-600 dark:text-white dark:border-0 ">{t("contact")}</Button>
-                            <Button style="bg-green-600 dark:bg-green-600 dark:text-white dark:border-0" onClick={handleChangeLanguage}>{lang === "en" ? "TR" : "EN"}</Button>
+                            <Button style="bg-green-400 dark:text-white dark:border-0 ">{t("contact")}</Button>
+                            <Dropdown trigger={<Button><FontAwesomeIcon size="lg" icon={faGlobe} /></Button>}>
+                                <DropdownItem key={"EN"} onClick={() => handleChangeLanguage("en")}>
+                                    EN
+                                </DropdownItem >
+                                <DropdownItem key={"TR"} onClick={() => handleChangeLanguage("tr")} >
+                                    TR
+                                </DropdownItem>
+                                <DropdownItem key={"DE"} onClick={() => handleChangeLanguage("de")}>
+                                    DE
+                                </DropdownItem>
+                                <DropdownItem key={"ES"} onClick={() => handleChangeLanguage("es")}>
+                                    ES
+                                </DropdownItem>
+                            </Dropdown>
                         </div>
                     </div>
                 </div>
