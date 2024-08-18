@@ -20,7 +20,7 @@ const MainNavigation = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
-    const { lang, handleLanguage, t } = useContext(LanguageContext);
+    const { handleLanguage, t } = useContext(LanguageContext);
 
     const handleChangeLanguage = (e) => {
 
@@ -51,7 +51,7 @@ const MainNavigation = () => {
     }, [])
     return (
         <nav className={toggleDarkMode ? " dark:bg-gray-600 dark:text-white w-full left-0 right-0 top-0 " : "bg-gray-100 left-0 right-0 top-0"}>
-            <div className="max-w-7xl mx-auto w-full relative background" >
+            <div className="max-w-7xl mx-auto w-full relative background " >
                 <div className="flex mx-auto justify-between w-5/6 text-gray-800">
                     {/* Primary menu and logo */}
                     <div className="flex items-center gap-16 my-12 dark:text-white ">
@@ -119,6 +119,7 @@ const MainNavigation = () => {
                     <div className="flex flex-col gap-8 w-full font-bold tracking-wider  lg:flex items-start gap-2  ">
                         <Link className="hover:underline hover:scale-110 duration-300" to="/Home">{t("home")}</Link>
                         <Link className="hover:underline hover:scale-110 duration-300" to="/Services">{t("services.services")}</Link>
+                        <Link className="hover:underline hover:scale-110 duration-300" to="/Blog">{t("blog")}</Link>
                         <Link className="hover:underline hover:scale-110 duration-300" to="/About">{t("about")}</Link>
                     </div>
                     <div className="flex items-center mx-6 mt-8 gap-16 ">

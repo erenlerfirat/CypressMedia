@@ -6,7 +6,7 @@ import AboutContent from './AboutContent'
 
 function About() {
     return (
-        <div className="">
+        <div className="bg-gray-100 dark:bg-gray-600 h-screen w-screen overflow-x-hidden">
             <MainNavigation />
             <AboutContent />
             <ContactForm />

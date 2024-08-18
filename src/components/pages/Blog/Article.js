@@ -3,7 +3,7 @@ import React from 'react'
 function Article() {
     var date = Date.now();
     return (
-        <div className="min-h-screen p-24 flex justify-center">
+        <div className="min-h-screen p-16 flex justify-center">
             <div className="max-w-2xl">
                 <h1 className="font-extrabold text-3xl mb-2">{"Regain your confidence with our expert hair transplant solutions—natural results, no compromise."}</h1>
 
