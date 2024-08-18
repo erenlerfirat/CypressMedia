@@ -69,7 +69,7 @@ const MainNavigation = () => {
                         <div className="hidden lg:flex xl:gap-12 gap-6 ease-in-out ">
                             <Link className="hover:underline hover:scale-110 duration-300  " to="/Home">{t("home")}</Link>
                             <ServicesDropdown />
-                            <Link className="hover:underline hover:scale-110 duration-300" to="/Doctors">{t("doctors")}</Link>
+                            <Link className="hover:underline hover:scale-110 duration-300" to="/Blog">{t("blog")}</Link>
                             <Link className="hover:underline hover:scale-110 duration-300" to="/About">{t("about")}</Link>
                         </div>
                     </div>
