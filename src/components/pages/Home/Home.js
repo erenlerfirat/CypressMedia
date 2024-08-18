@@ -1,6 +1,5 @@
 import React from 'react'
 import Service from '../Services/Service.js'
-import Calendar from './Calendar.js'
 import MainNavigation from '../../layout/MainNavigation.js'
 import Footer from '../../layout/Footer.js'
 import Slider from './Slider.js'
@@ -15,7 +14,6 @@ function Home() {
             <Faq />
             <Slider />
             <ContactForm />
-            <Calendar />
             <Footer />
         </div>
     )

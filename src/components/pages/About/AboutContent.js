@@ -1,8 +1,7 @@
-import React from 'react'
 
 function AboutContent() {
     return (
-        <div className="min-h-screen p-20 flex justify-center">
+        <div className="min-h-screen p-16 flex justify-center">
             <div className="max-w-2xl ">
                 <h1 className="font-extrabold text-3xl  mb-12">{"About Us"}</h1>
                 <p className="[&>p]:mb-8 [&>h2]:font-extrabold lg:leading-[2rem]  ">
