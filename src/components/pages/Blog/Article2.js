@@ -2,12 +2,13 @@ import MainNavigation from '../../layout/MainNavigation'
 import ContactForm from '../Home/ContactForm'
 import { Footer } from 'flowbite-react'
 
-function Article() {
+function Article2() {
 
     return (
         <>
             <MainNavigation />
-            <div className="min-h-screen p-16 flex justify-center">
+
+            <div className="min-h-screen p-16 flex justify-center dark:text-white">
                 <div className="max-w-2xl">
                     <h1 className="font-extrabold text-3xl mb-2">{"Regain your confidence with our expert hair transplant solutions—natural results, no compromise."}</h1>
 
@@ -31,4 +32,4 @@ function Article() {
     )
 }
 
-export default Article
+export default Article2

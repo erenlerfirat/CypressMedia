@@ -6,6 +6,9 @@ import { useTranslation } from 'react-i18next';
 import { Routes, Route } from 'react-router-dom';
 import Blog from './components/pages/Blog/Blog.js';
 import About from './components/pages/About/About.js';
+import Article from './components/pages/Blog/Article.js';
+import Article2 from './components/pages/Blog/Article2.js';
+
 function App() {
   const { t, i18n: { changeLanguage, language } } = useTranslation();
   const [lang, setLanguage] = useState("en");
@@ -24,6 +27,8 @@ function App() {
     <LanguageContext.Provider value={value}>
       <Routes>
         <Route path="*" element={<Home />} />
+        <Route path="/Blog/1" element={<Article />} />
+        <Route path="/Blog/2" element={<Article2 />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/About" element={<About />} />
       </Routes>
