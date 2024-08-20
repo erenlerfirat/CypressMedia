@@ -1,7 +1,7 @@
 
 function Footer() {
     return (
-        <div className=" dark:text-white dark:bg-gray-600 my-24 ">
+        <div className=" dark:text-white dark:bg-gray-800 my-24 ">
             <div className="w-full flex flex-col justify-center lg:flex-row xl:text-lg lg:text-sm text-lg text-gray-700  ">
                 <div className="my-8 mx-4 p-4 border-t-2  md:w-full ">
                     <p className="dark:text-white">Discover the pinnacle of hair restoration with our expert hair transplant services. Located in Istanbul, we combine advanced techniques with personalized care to achieve natural-looking results. Our skilled team ensures a seamless experience, from consultation to recovery, helping you regain confidence with fuller, healthier hair. Your journey to a renewed self starts here.</p>

@@ -1,19 +1,20 @@
+import Footer from '../../layout/Footer'
 import MainNavigation from '../../layout/MainNavigation'
 import ContactForm from '../Home/ContactForm'
-import { Footer } from 'flowbite-react'
+
 
 function Article() {
 
     return (
         <>
             <MainNavigation />
-            <div className="min-h-screen p-16 flex justify-center">
+            <div className="min-h-screen p-16 flex justify-center dark:text-white">
                 <div className="max-w-2xl">
                     <h1 className="font-extrabold text-3xl mb-2">{"Regain your confidence with our expert hair transplant solutions—natural results, no compromise."}</h1>
 
                     <p className="mb-6 text-slate-400 ">
                         Posted on{" "}
-                        {new Date("1723971371210").toLocaleDateString("en-US", {
+                        {new Date('August 20, 2023 13:24:00').toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
                             day: "numeric",

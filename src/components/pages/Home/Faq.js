@@ -1,154 +1,93 @@
-import React from 'react'
-import { Accordion } from "flowbite-react";
-import LanguageContext from "../../../context/LanguageContext";
-import { useContext } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react"
+import { ChevronDown } from "react-feather";
 
-function Faq() {
-    const { lang, handleLanguage, t } = useContext(LanguageContext);
+const AccordianContext = createContext()
+
+export function Accordian({ children, value, onChange, ...props }) {
+    const [selected, setSelected] = useState(value);
+
+    useEffect(() => {
+        onChange?.(selected)
+    }, [selected])
+
     return (
-        <>
-            <h1 className="text-3xl text-center mt-4 italic dark:text-gray-200 uppercase">{t("faq.faq")}</h1>
-            <div className="grid lg:grid-flow-col xl:grid-flow-col w-8/12 mx-auto my-12">
-                <Accordion className="w-full mx-auto dark:border-gray-400 dark:divide-white">
-                    <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">{t("faq.item.header")}</Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
-                                dropdowns, modals, navbars, and more.
-                            </p>
-                            <p className="text-gray-500 dark:text-gray-400">
-                                Check out this guide to learn how to&nbsp;
-                                <a
-                                    href="https://flowbite.com/docs/getting-started/introduction/"
-                                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                                >
-                                    get started&nbsp;
-                                </a>
-                                and start developing websites even faster with components on top of Tailwind CSS.
-                            </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">Is there a Figma file available?</Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
-                                has a design equivalent in our Figma file.
-                            </p>
-                            <p className="text-gray-500 dark:text-gray-400">
-                                Check out the
-                                <a href="https://flowbite.com/figma/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                                    Figma design system
-                                </a>
-                                based on the utility classes from Tailwind CSS and components from Flowbite.
-                            </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                The main difference is that the core components from Flowbite are open source under the MIT license, whereas
-                                Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
-                                components, whereas Tailwind UI offers sections of pages.
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no
-                                technical reason stopping you from using the best of two worlds.
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                            <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                                <li>
-                                    <a href="https://flowbite.com/pro/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                                        Flowbite Pro
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://tailwindui.com/"
-                                        rel="nofollow"
-                                        className="text-cyan-600 hover:underline dark:text-cyan-500"
-                                    >
-                                        Tailwind UI
-                                    </a>
-                                </li>
-                            </ul>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                </Accordion>
-                <Accordion className="w-full mx-auto dark:border-gray-400 dark:divide-white">
-                    <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">What is Flowbite?</Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
-                                dropdowns, modals, navbars, and more.
-                            </p>
-                            <p className="text-gray-500 dark:text-gray-400">
-                                Check out this guide to learn how to&nbsp;
-                                <a
-                                    href="https://flowbite.com/docs/getting-started/introduction/"
-                                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                                >
-                                    get started&nbsp;
-                                </a>
-                                and start developing websites even faster with components on top of Tailwind CSS.
-                            </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">Is there a Figma file available?</Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                Flowbite is first conceptualized and designed using the Figma software so everything you see in the library
-                                has a design equivalent in our Figma file.
-                            </p>
-                            <p className="text-gray-500 dark:text-gray-400">
-                                Check out the
-                                <a href="https://flowbite.com/figma/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                                    Figma design system
-                                </a>
-                                based on the utility classes from Tailwind CSS and components from Flowbite.
-                            </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel>
-                        <Accordion.Title className="hover:bg-gray-200 dark:text-gray-200">What are the differences between Flowbite and Tailwind UI?</Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                The main difference is that the core components from Flowbite are open source under the MIT license, whereas
-                                Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
-                                components, whereas Tailwind UI offers sections of pages.
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no
-                                technical reason stopping you from using the best of two worlds.
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                            <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                                <li>
-                                    <a href="https://flowbite.com/pro/" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                                        Flowbite Pro
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://tailwindui.com/"
-                                        rel="nofollow"
-                                        className="text-cyan-600 hover:underline dark:text-cyan-500"
-                                    >
-                                        Tailwind UI
-                                    </a>
-                                </li>
-                            </ul>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                </Accordion>
-            </div>
-        </>
-
+        <ul {...props}>
+            <AccordianContext.Provider value={{ selected, setSelected }}>
+                {children}
+            </AccordianContext.Provider>
+        </ul>
     )
 }
 
-export default Faq
+
+export function AccordianItem({ children, value, trigger, ...props }) {
+    const { selected, setSelected } = useContext(AccordianContext);
+
+    const open = selected === value;
+    const ref = useRef(null)
+
+    return (
+        <li className="border-b bg-white dark:bg-gray-700 dark:text-white shadow-lg " {...props}>
+            <header
+                role="button"
+                onClick={() => setSelected(open ? null : value)}
+                className="flex justify-between items-center p-4 font-medium"
+            >
+                {trigger}
+                <ChevronDown size={16} className={`transition-transform ${open ? "rotate-180" : ""}`} />
+            </header>
+            <div className="overflow-y-hidden transition-all"
+                style={{ height: open ? ref.current?.offsetHeight || 0 : 0 }}
+            >
+                <div className="pt-2 p-4" ref={ref}>
+                    {children}
+                </div>
+            </div>
+        </li>
+    )
+}
+
+export default function Faq() {
+    const anyhting = <div className="flex flex-row w-full pr-3 justify-between items-center">
+        <div className="bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text font-bold">
+            Anything Goes?
+        </div>
+        <div><img src={"dot"} width="12px" alt="dot" /></div>
+    </div>
+
+    const only = <div className="flex items-center">
+        And it's <img src={"react"} width={40} className="px-2" /> & <img src={"tailwindCSS"} width={40} className="px-2" /> Only.
+    </div>
+    return (
+        <>
+            <div className='min-h-screen w-screen flex flex-col items-center justify-center bg-white dark:bg-gray-800'>
+                <Accordian className="max-w-lg rounded w-screen">
+                    <AccordianItem value="1" trigger="👋 Hello There">
+                        We're going to make this Accordian component entirely from scratch
+                    </AccordianItem>
+                    <AccordianItem value="2" trigger="🌟 It's Animated">
+                        We'll learn how to make it transition between the open and close states
+                    </AccordianItem>
+                    <AccordianItem value="3" trigger={anyhting}>
+                        It is entirely customizable. You can put any HTML element and style it however you want.
+                    </AccordianItem>
+                    <AccordianItem value="4" trigger={only}>
+                        Nothing but React and Tailwind CSS
+                    </AccordianItem>
+                    <AccordianItem value="5" trigger="👋 Hello There">
+                        We're going to make this Accordian component entirely from scratch
+                    </AccordianItem>
+                    <AccordianItem value="6" trigger="🌟 It's Animated">
+                        We'll learn how to make it transition between the open and close states
+                    </AccordianItem>
+                    <AccordianItem value="7" trigger="👋 Hello There">
+                        We're going to make this Accordian component entirely from scratch
+                    </AccordianItem>
+                    <AccordianItem value="8" trigger="🌟 It's Animated">
+                        We'll learn how to make it transition between the open and close states
+                    </AccordianItem>
+                </Accordian>
+            </div>
+        </>
+    )
+}

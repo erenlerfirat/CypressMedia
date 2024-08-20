@@ -50,18 +50,18 @@ const MainNavigation = () => {
         }
     }, [])
     return (
-        <nav className={toggleDarkMode ? " dark:bg-gray-600 dark:text-white w-full left-0 right-0 top-0 " : "bg-gray-100 left-0 right-0 top-0"}>
+        <nav className={toggleDarkMode ? " bg-white dark:bg-gray-800 dark:text-white w-full left-0 right-0 top-0 " : "bg-white left-0 right-0 top-0"}>
             <div className="max-w-7xl mx-auto w-full relative background " >
-                <div className="flex mx-auto justify-between w-5/6 text-gray-800">
+                <div className="flex mx-auto justify-between w-5/6 ">
                     {/* Primary menu and logo */}
-                    <div className="flex items-center gap-16 my-12 dark:text-white ">
+                    <div className="bg-white flex items-center gap-16 my-12 dark:text-white dark:bg-gray-800 ">
                         {/* logo */}
-                        <div className="font-bold ease-in-out hover:scale-110 duration-500 ">
+                        <div className=" font-bold ease-in-out hover:scale-110 duration-500 ">
                             <a
                                 href="/"
                                 className="flex font-bold items-center gap-1 "
                             >
-                                <img src={logo} alt="" />
+                                <img src={logo} alt="" className="rounded-3xl" />
                                 <span className=""> Cypress Media </span>
                             </a>
                         </div>
@@ -79,7 +79,7 @@ const MainNavigation = () => {
                             <div className="dark:bg-gray-500 lg:flex items-center gap-2 dark:bg-white" >
                                 {
                                     toggleDarkMode
-                                        ? <SunIcon onClick={() => ToggleDarkTheme(false)} className="dark:bg-gray-600 dark:text-white h-6 w-6 " />
+                                        ? <SunIcon onClick={() => ToggleDarkTheme(false)} className="dark:bg-gray-800 dark:text-white h-6 w-6 " />
                                         : <MoonIcon onClick={() => ToggleDarkTheme(true)} className="h-6 w-6" />
                                 }
                             </div>

@@ -11,7 +11,7 @@ function Service() {
     const { lang, handleLanguage, t } = useContext(LanguageContext);
 
     return (
-        <div className="min-w-full mx-auto bg-gray-100 dark:text-white dark:bg-gray-600  ">
+        <div className="min-w-full mx-auto bg-green-50 dark:text-white dark:bg-gray-800  ">
             <p className="text-center pt-24 mb-8 text-4xl text-gray-700 dark:text-white ">{t("services.services")}</p>
             <ul className="max-w-7xl grid lg:grid-cols-3 md:grid-cols-2 md:grid-cols-1 gap-3 w-11/12 mx-auto  py-6 text-gray-700 dark:divide-gray-100 dark:text-white">
                 <ServiceSection

@@ -1,6 +1,6 @@
 import MainNavigation from '../../layout/MainNavigation'
 import ContactForm from '../Home/ContactForm'
-import { Footer } from 'flowbite-react'
+import Footer from '../../layout/Footer'
 
 function Article2() {
 
@@ -14,7 +14,7 @@ function Article2() {
 
                     <p className="mb-6 text-slate-400 ">
                         Posted on{" "}
-                        {new Date("1723971371210").toLocaleDateString("en-US", {
+                        {new Date('September 01, 2024 03:24:00').toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
                             day: "numeric",

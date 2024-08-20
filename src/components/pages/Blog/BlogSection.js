@@ -1,6 +1,3 @@
-import React, { useState } from 'react'
-import Article from './Article';
-import Article2 from './Article2';
 import { Link } from 'react-router-dom'
 
 function BlogSection() {
