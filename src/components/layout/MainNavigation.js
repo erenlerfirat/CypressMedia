@@ -50,11 +50,11 @@ const MainNavigation = () => {
         }
     }, [])
     return (
-        <nav className={toggleDarkMode ? " bg-white dark:bg-gray-800 dark:text-white w-full left-0 right-0 top-0 " : "bg-white left-0 right-0 top-0"}>
+        <nav className={`bg-white dark:bg-gray-800 dark:text-white w-full left-0 right-0 top-0 ${toggleMenu ? " fixed" : ""}`}>
             <div className="max-w-7xl mx-auto w-full relative background " >
                 <div className="flex mx-auto justify-between w-5/6 ">
                     {/* Primary menu and logo */}
-                    <div className="bg-white flex items-center gap-16 my-12 dark:text-white dark:bg-gray-800 ">
+                    <div className="bg-white flex items-center gap-16 my-12 dark:text-white dark:bg-gray-800">
                         {/* logo */}
                         <div className=" font-bold ease-in-out hover:scale-110 duration-500 ">
                             <a
@@ -112,7 +112,7 @@ const MainNavigation = () => {
             </div>
             {/* mobile navigation */}
             <div
-                className={`fixed z-40 w-full bg-gray-100 overflow-hidden flex flex-col lg:hidden gap-12 origin-top duration-700 dark:bg-gray-600 ${!toggleMenu ? "h-0" : "h-full"
+                className={`fixed z-40 w-full bg-gray-50 overflow-hidden flex flex-col lg:hidden gap-12 origin-top duration-700 dark:bg-gray-600 ${!toggleMenu ? "h-0" : "h-full"
                     }`}
             >
                 <div className=" mx-6">
