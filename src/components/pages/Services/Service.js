@@ -5,6 +5,12 @@ import { faCreditCard, faEnvelope, faPhotoFilm, faCommentSms, faCalendar } from 
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import LanguageContext from "../../../context/LanguageContext";
 import { useContext } from "react";
+import img from '../../../assets/card-1.jpg'
+import img2 from '../../../assets/card-2.jpg'
+import img3 from '../../../assets/card-3.jpg'
+import img4 from '../../../assets/card-4.jpg'
+import img5 from '../../../assets/card-5.jpg'
+import img6 from '../../../assets/card-6.jpg'
 
 function Service() {
 
@@ -15,39 +21,39 @@ function Service() {
             <p className="text-center pt-24 mb-8 text-4xl text-gray-700 dark:text-white ">{t("services.services")}</p>
             <ul className="max-w-7xl grid lg:grid-cols-3 md:grid-cols-2 md:grid-cols-1 gap-3 w-11/12 mx-auto  py-6 text-gray-700 dark:divide-gray-100 dark:text-white">
                 <ServiceSection
+                    img={img}
                     headerFirstLine={t("services.item.header")}
                     desc={t("services.item.desc")}>
-                    <FontAwesomeIcon className="text-yellow-500 mx-4 my-4" size="xl" icon={faPhotoFilm} />
                 </ServiceSection>
 
                 <ServiceSection
+                    img={img2}
                     headerFirstLine={t("services.item2.header")}
                     desc={t("services.item2.desc")}>
-                    <FontAwesomeIcon className="text-orange-500 mx-4 my-4" size="xl" icon={faCalendar} />
                 </ServiceSection>
 
                 <ServiceSection
+                    img={img3}
                     headerFirstLine={t("services.item3.header")}
                     desc={t("services.item3.desc")}>
-                    <FontAwesomeIcon className="text-blue-500 mx-4 my-4" size="xl" icon={faEnvelope} />
                 </ServiceSection>
 
                 <ServiceSection
+                    img={img4}
                     headerFirstLine={t("services.item4.header")}
                     desc={t("services.item4.desc")}>
-                    <FontAwesomeIcon className="text-gray-500 mx-4 my-4" size="xl" icon={faCommentSms} />
                 </ServiceSection>
 
                 <ServiceSection
+                    img={img5}
                     headerFirstLine={t("services.item5.header")}
                     desc={t("services.item5.desc")}>
-                    <FontAwesomeIcon className="text-yellow-500 mx-4 my-4" size="xl" icon={faCreditCard} />
                 </ServiceSection>
 
                 <ServiceSection
+                    img={img6}
                     headerFirstLine={t("services.item6.header")}
                     desc={t("services.item6.desc")}>
-                    <FontAwesomeIcon className="text-green-600  mx-4 my-4 " size="xl" icon={faWhatsapp} />
                 </ServiceSection>
             </ul>
         </div>
